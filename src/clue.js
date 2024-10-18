@@ -60,9 +60,9 @@ const suspectsArray = [
     }
 ];
 
-// Rooms Array
+// Weapons Array
 
-const roomsArray = [
+const  weaponsArray = [
     {
         name: "rope", 
         weight: 10
@@ -101,10 +101,10 @@ const roomsArray = [
     }
 ];
 
-// Weapons Array
+// Rooms Array
 
-const weaponsArray = [
-    { name: "Dining Room"},
+const roomsArray = [
+    {name: "Dining Room"},
     {name: "Conservatory"},
     {name: "Kitchen"},
     {name: "Study"},
@@ -122,13 +122,23 @@ const weaponsArray = [
 ];
 
 
+
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(array) {
+    
+    if (array.length === 0){
+        return undefined
+    } else {
+    return array[Math.floor(Math.random() * array.length)]
+    }
+}
+
+selectRandom(suspectsArray)
 
 function pickMystery() {}
 
-
+// console.log(suspectsArray[Math.round(Math.random()* 10)])
 // ITERATION 3
 
 function revealMystery(object) {
